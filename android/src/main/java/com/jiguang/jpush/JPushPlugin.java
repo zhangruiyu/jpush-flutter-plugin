@@ -275,6 +275,7 @@ public class JPushPlugin implements MethodCallHandler {
         String rid = JPushInterface.getRegistrationID(registrar.context());
         if (rid == null || rid.isEmpty()) {
             getRidCache.add(result);
+            result.success("");
         } else {
             result.success(rid);
         }
